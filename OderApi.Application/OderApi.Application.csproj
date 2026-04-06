@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\DemoECommerce.SharedLibrarySolutionNew\eCommerce.SharedLibrary\eCommerce.SharedLibrary.csproj" />
+    <ProjectReference Include="..\OderApi.Domain\OderApi.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

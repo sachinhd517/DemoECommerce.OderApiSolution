@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\OderApi.Application\OderApi.Application.csproj" />
+  </ItemGroup>
+
 </Project>
