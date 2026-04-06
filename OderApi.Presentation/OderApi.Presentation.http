@@ -1,0 +1,6 @@
+@OderApi.Presentation_HostAddress = http://localhost:5278
+
+GET {{OderApi.Presentation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
