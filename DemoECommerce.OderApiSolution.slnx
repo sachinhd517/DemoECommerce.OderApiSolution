@@ -1,7 +1,7 @@
 <Solution>
   <Project Path="../DemoECommerce.SharedLibrarySolutionNew/eCommerce.SharedLibrary/eCommerce.SharedLibrary.csproj" />
   <Project Path="OderApi.Application/OderApi.Application.csproj" />
-  <Project Path="OderApi.Domain/OrderApi.Domain.csproj" />
+  <Project Path="OderApi.Domain/OderApi.Domain.csproj" />
   <Project Path="OderApi.Infrastructure/OderApi.Infrastructure.csproj" />
   <Project Path="OderApi.Presentation/OderApi.Presentation.csproj" />
 </Solution>
