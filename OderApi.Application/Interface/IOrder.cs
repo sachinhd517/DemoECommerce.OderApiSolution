@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace OderApi.Application.Interface
 {
-    internal interface IOrder : IGenericInterface<Order>
+    public interface IOrder : IGenericInterface<Order>
     {
         Task<IEnumerable<Order>> GetOrdersAsync(Expression<Func<Order, bool>> predicate);
     }
