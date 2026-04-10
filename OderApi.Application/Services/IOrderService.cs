@@ -12,6 +12,6 @@ namespace OderApi.Application.Services
         Task<IEnumerable<OrderDTO>> GetOrdersByClientId(int clientId);
 
         Task<OrderDetailsDTO> GetOrderDetails(int orderId);
-
+        Task<AppUserDTO> GetUser(int userId);
     }
 }
