@@ -17,4 +17,8 @@
     <ProjectReference Include="..\OderApi.Domain\OderApi.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DependencyInjection\" />
+  </ItemGroup>
+
 </Project>
