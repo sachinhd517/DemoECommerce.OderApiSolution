@@ -1,4 +1,5 @@
 ﻿using OderApi.Application.DTOs;
+using OderApi.Application.DTOs.NewFolder;
 using OderApi.Application.Interface;
 using Polly;
 using Polly.Registry;
@@ -80,9 +81,17 @@ namespace OderApi.Application.Services
         
         }
 
-        public Task<IEnumerable<OrderDTO>> GetOrdersByClientId(int clientId)
+        public async Task<IEnumerable<OrderDTO>> GetOrdersByClientId(int clientId)
         {
-            throw new NotImplementedException();
+            // Get all Client's orders
+            var orders = await orderInterface.GetOrdersAsync(o => o.ClientId == clientId);
+            if(!orders.Any())
+            {
+                return null!;
+            }
+            // Convert to OrderDTO
+            var (_, _orders) = OrderConversion.FromEntity(null, orders);
+            return _orders!;
         }
     }
 }
