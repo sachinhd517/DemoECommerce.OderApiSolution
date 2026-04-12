@@ -15,4 +15,8 @@
     <ProjectReference Include="..\OderApi.Application\OderApi.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
 </Project>
