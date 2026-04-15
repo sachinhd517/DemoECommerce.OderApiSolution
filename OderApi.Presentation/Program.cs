@@ -44,6 +44,10 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
+app.UserInfrastrucureService();
+
+app.UseSwagger();
+app.UseSwaggerUI();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
