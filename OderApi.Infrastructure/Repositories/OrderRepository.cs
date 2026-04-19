@@ -1,6 +1,7 @@
 ﻿using eCommerce.SharedLibrary.Logs;
 using eCommerce.SharedLibrary.Responses;
 using Microsoft.EntityFrameworkCore;
+using OderApi.Application.DTOs;
 using OderApi.Application.Interface;
 using OderApi.Domain.Entities;
 using OderApi.Infrastructure.Data;
@@ -108,6 +109,15 @@ namespace OderApi.Infrastructure.Repositories
             }
         }
 
+        public Task<OrderDetailsDTO> GetOrderDetails(int orderId)
+        {
+            throw new NotImplementedException();
+        }
+        public Task GetOrdersByClientId(int clientId)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<IEnumerable<Order>> GetOrdersAsync(Expression<Func<Order, bool>> predicate)
         {
             try
@@ -124,6 +134,8 @@ namespace OderApi.Infrastructure.Repositories
                 throw new Exception("Error occured while retrieving orders 📦📦📦📦📦📦📦" + "Error occured while placing orders");
             }
         }
+
+        
 
         public async Task<Response> UpdateAsync(Order entity)
         {
@@ -146,6 +158,11 @@ namespace OderApi.Infrastructure.Repositories
                 // Display scary-free message to client
                 return new Response(false, "Error occured while placing orders");
             }
+        }
+
+        Task<List<OrderDTO>> IOrder.GetOrdersByClientId(int clientId)
+        {
+            throw new NotImplementedException();
         }
     }
 }
