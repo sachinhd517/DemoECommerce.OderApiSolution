@@ -1,4 +1,5 @@
 using OderApi.Infrastructure.DependencyInjection;
+using OderApi.Application.DependencyInjection;
 
 
 
@@ -11,6 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen();
 builder.Services.AddInfrastrucureService(builder.Configuration);
+builder.Services.AddApplicationService(builder.Configuration);
 
 builder.Services.AddCors(options =>
 {
