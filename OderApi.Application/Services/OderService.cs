@@ -93,5 +93,10 @@ namespace OderApi.Application.Services
             var (_, _orders) = OrderConversion.FromEntity(null, orders);
             return _orders!;
         }
+
+        public Task<IEnumerable<OrderDTO>> GetAllAsync()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

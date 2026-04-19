@@ -1,4 +1,5 @@
 ﻿using eCommerce.SharedLibrary.Interface;
+using OderApi.Application.DTOs;
 using OderApi.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -12,5 +13,7 @@ namespace OderApi.Application.Interface
     public interface IOrder : IGenericInterface<Order>
     {
         Task<IEnumerable<Order>> GetOrdersAsync(Expression<Func<Order, bool>> predicate);
+        Task<List<OrderDTO>> GetOrdersByClientId(int clientId);
+        Task<OrderDetailsDTO> GetOrderDetails(int orderId);
     }
 }
